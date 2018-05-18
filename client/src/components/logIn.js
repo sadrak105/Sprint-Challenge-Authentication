@@ -9,7 +9,7 @@ class LogIn extends React.Component {
   
   sumbitHandler = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
     axios
       .post('http://localhost:5000/api/login', this.state)
       .then(response => {

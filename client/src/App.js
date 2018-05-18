@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router';
+
+//Import Components
+import LogIn from "./components/logIn";
+import SignUp from "./components/signUp";
+import Jokes from "./components/jokes";
 
 class App extends Component {
   render() {
@@ -10,9 +16,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {/*App Routes*/}
+        <Route path='/login' component={LogIn} />
+        <Route path='/signup' component={SignUp} />
+        <Route path='/jokes' component={Jokes} />
+                
       </div>
     );
   }
